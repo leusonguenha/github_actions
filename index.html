@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>DevOps Demo - GitHub Actions</title>
+  <title>DevOps Demo - Git e GitHub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,39 +12,94 @@
       <a href="index.html">Home</a> |
       <a href="about.html">Sobre Nós</a>
     </nav>
-    <h1> DevOps com GitHub Actions</h1>
-    <p>Automatização de tarefas no desenvolvimento moderno</p>
+    <h1>Guia de Git e GitHub</h1>
+    <p>Aprenda controlo de versão e colaboração de forma simples</p>
   </header>
 
   <section class="card">
-    <h2> O que é isto?</h2>
+    <h2>O que é Git?</h2>
     <p>
-      Este site é atualizado automaticamente sempre que há mudanças no código.
-      Isso é possível graças ao GitHub Actions.
+      Git é um sistema de controlo de versão que permite guardar o histórico do código,
+      voltar atrás em alterações e trabalhar em equipa.
     </p>
   </section>
 
   <section class="card">
-    <h2> O que acontece?</h2>
+    <h2>Instalação do Git</h2>
     <ul>
-      <li>Fazemos push no código</li>
-      <li>O GitHub Actions executa um workflow</li>
-      <li>O site é publicado automaticamente</li>
+      <li><strong>Windows:</strong> Baixar em https://git-scm.com</li>
+      <li><strong>Linux:</strong> sudo apt install git</li>
+      <li><strong>Mac:</strong> brew install git</li>
     </ul>
   </section>
 
   <section class="card">
-    <h2> Última atualização</h2>
-    <p id="time"></p>
+    <h2>Configuração Inicial</h2>
+    <pre>
+git config --global user.name "Teu Nome"
+git config --global user.email "teu@email.com"
+    </pre>
+  </section>
+
+  <section class="card">
+    <h2>Criar Projeto</h2>
+    <pre>
+mkdir meu-projeto
+cd meu-projeto
+git init
+    </pre>
+  </section>
+
+  <section class="card">
+    <h2>Comandos Básicos</h2>
+    <pre>
+git add .
+git commit -m "mensagem"
+git status
+git log
+    </pre>
+  </section>
+
+  <section class="card">
+    <h2>Ligar ao GitHub</h2>
+    <pre>
+git remote add origin https://github.com/user/repositorio.git
+git push -u origin main
+    </pre>
+  </section>
+
+  <section class="card">
+    <h2>Fluxo de Trabalho</h2>
+    <ul>
+      <li>Editar código</li>
+      <li>git add .</li>
+      <li>git commit</li>
+      <li>git push</li>
+    </ul>
   </section>
 
   <section class="card highlight">
-    <h2> Por que isso é importante?</h2>
-    <p>
-      Automatizar processos reduz erros, poupa tempo e melhora a produtividade das equipas.
-    </p>
+    <h2>Dicas Importantes</h2>
+    <ul>
+      <li>Fazer commits frequentes</li>
+      <li>Usar mensagens claras</li>
+      <li>Testar antes de fazer push</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Última atualização</h2>
+    <p id="time"></p>
   </section>
 
   <footer>
     <p>Feito com amor usando GitHub Actions pelo Grupo II</p>
-  </foot
+  </footer>
+
+  <script>
+    document.getElementById("time").innerText =
+      new Date().toLocaleString();
+  </script>
+
+</body>
+</html>
